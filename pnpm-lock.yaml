@@ -11,17 +11,21 @@ specifiers:
   eslint-config-next: ^12.1.6
   husky: ^8.0.0
   next: 12.1.6
+  next-themes: ^0.2.0
   postcss: ^8.4.13
   prettier: ^2.6.2
   react: 18.1.0
   react-dom: 18.1.0
+  react-icons: ^4.3.1
   tailwindcss: ^3.0.24
   typescript: 4.6.4
 
 dependencies:
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
+  next-themes: 0.2.0_2mgcgz5qhsdxw4fgpqzqeafmkq
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
+  react-icons: 4.3.1_react@18.1.0
 
 devDependencies:
   '@commitlint/cli': 16.2.4
@@ -2090,6 +2094,18 @@ packages:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
 
+  /next-themes/0.2.0_2mgcgz5qhsdxw4fgpqzqeafmkq:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
+
   /next/12.1.6_ef5jwxihqo6n7gxfmzogljlgcm:
     resolution: {integrity: sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A==}
     engines: {node: '>=12.22.0'}
@@ -2484,6 +2500,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.1.0
       scheduler: 0.22.0
+    dev: false
+
+  /react-icons/4.3.1_react@18.1.0:
+    resolution: {integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /react-is/16.13.1:
