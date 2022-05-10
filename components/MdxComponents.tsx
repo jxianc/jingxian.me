@@ -8,11 +8,20 @@ const CustomLink = (props: any) => {
   if (isInternal) {
     return (
       <NextLink href={href}>
-        <a {...props}>{props.children}</a>
+        <a className="font-semibold" {...props}>
+          {props.children}
+        </a>
       </NextLink>
     )
   }
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+      className="font-semibold"
+    />
+  )
 }
 
 export const MdxComponents = {

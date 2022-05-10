@@ -26,9 +26,27 @@ module.exports = {
         },
       },
       typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.gray.800"),
+            a: {
+              color: theme("colors.blue.400"),
+              "&:hover": {
+                color: theme("colors.blue.500"),
+              },
+            },
+          },
+        },
         dark: {
           css: {
             color: theme("colors.gray.200"),
+            a: {
+              color: theme("colors.blue.200"),
+              "&:hover": {
+                color: theme("colors.blue.300"),
+              },
+            },
+            strong: { color: theme("colors.gray.100") },
           },
         },
       }),
