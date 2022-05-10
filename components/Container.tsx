@@ -28,12 +28,12 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
   }, [])
 
   return (
-    <div className="min-h-screen overflow-hidden dark:bg-black/30">
+    <div className="min-h-screen overflow-hidden dark:bg-black/40">
       <div className="relative">
-        <div className="max-w-3xl mx-auto w-full opacity-100">
+        <div className="max-w-2xl mx-auto w-full opacity-100">
           <div className="flex flex-col justify-center px-4 sm:px-8">
             <nav className="flex items-center justify-between py-4 sm:py-8">
-              <div className="hidden sm:block justify-between space-x-6">
+              <div className="hidden sm:block justify-between space-x-4">
                 {items.map((i, idx) => (
                   <NavItem key={idx} href={i.href} label={i.label} />
                 ))}

@@ -25,7 +25,14 @@ module.exports = {
           900: "#222222",
         },
       },
+      typography: (theme) => ({
+        dark: {
+          css: {
+            color: theme("colors.gray.200"),
+          },
+        },
+      }),
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 }
