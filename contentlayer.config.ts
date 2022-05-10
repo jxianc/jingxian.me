@@ -56,15 +56,9 @@ export const Project = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
-    detail: {
-      type: "string",
-    },
-    dateStart: {
+    date: {
       type: "date",
       required: true,
-    },
-    dateEnd: {
-      type: "date",
     },
     repoUrl: {
       type: "string",
@@ -75,6 +69,7 @@ export const Project = defineDocumentType(() => ({
     },
     category: {
       type: "string",
+      required: true,
     },
     techs: {
       type: "list",

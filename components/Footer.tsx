@@ -7,7 +7,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ children }) => {
   return (
-    <div className="flex text-center items-center max-w-2xl w-full mx-auto justify-center">
+    <div className="flex text-center items-center max-w-2xl w-full mx-auto justify-center mb-10">
       <div className="flex flex-col space-y-2">
         <div className="flex flex-row justify-center space-x-2">
           <a href="https://github.com/jxianc" target="_blank" rel="noreferrer">

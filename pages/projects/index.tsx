@@ -14,7 +14,7 @@ const Projects: NextPage<ProjectsProps> = ({ projects, categories }) => {
   return (
     <Container>
       <h1 className="text-lg font-bold mb-4">Projects</h1>
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col space-y-6">
         {categories.map((cat, idx) => (
           <div key={idx} className="flex flex-col space-y-2">
             <h2 className="font-semibold">{cat}</h2>
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps<ProjectsProps> = async (
 ) => {
   const groupedProjects = groupBy(
     allProjects.sort((a, b) => {
-      return compareDesc(new Date(a.dateStart), new Date(b.dateStart))
+      return compareDesc(new Date(a.date), new Date(b.date))
     }),
     (p) => p.category,
   )
