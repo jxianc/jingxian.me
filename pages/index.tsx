@@ -23,14 +23,11 @@ const Home: NextPage<HomeProps> = ({ intro }) => {
           <h2>Based in {intro.base}</h2>
         </div>
       </div>
-      {/* <div>{allIntros[0].body.raw}</div> */}
       <article>
         <div className="prose dark:prose-dark max-w-full">
           <MDXContent components={MdxComponents} />
         </div>
       </article>
-      {/* <div dangerouslySetInnerHTML={{ __html: allPosts[0].body.html }}></div> */}
-      {/* <div>{allPosts[0].body.raw}</div> */}
     </Container>
   )
 }
