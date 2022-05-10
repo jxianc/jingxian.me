@@ -80,8 +80,7 @@ export const Project = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) =>
-        `/projects/${doc._raw.sourceFileName.replace(/\.mdx$/, "")}`,
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
   },
 }))

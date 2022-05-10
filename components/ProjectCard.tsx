@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project: p }) => {
   return (
-    <NextLink href={p.slug} passHref>
+    <NextLink href={`/projects/${p.slug}`} passHref>
       <div className="flex flex-col space-y-1 bg-gray-100/30 dark:bg-gray-900/30 p-4 rounded-sm cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-900">
         <div className="flex items-baseline justify-between">
           <h3 className="font-semibold">{p.name}</h3>
