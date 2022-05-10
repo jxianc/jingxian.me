@@ -17,7 +17,19 @@ export const Intro = defineDocumentType(() => ({
   },
 }))
 
+export const About = defineDocumentType(() => ({
+  name: "About",
+  filePathPattern: "about.mdx",
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+  },
+}))
+
 export default makeSource({
   contentDirPath: "contents",
-  documentTypes: [Intro],
+  documentTypes: [Intro, About],
 })

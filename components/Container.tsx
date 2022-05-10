@@ -64,7 +64,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
                 </button>
               )}
             </nav>
-            <div className="flex flex-col px-1 min-h-[75vh] mb-10">
+            <div className="flex flex-col px-3 min-h-[75vh] mb-10">
               {children}
             </div>
             <Footer />
