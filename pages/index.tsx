@@ -3,6 +3,7 @@ import { Container } from "../components/Container"
 import { allIntros, Intro } from "contentlayer/generated"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import { MdxComponents } from "components/MdxComponents"
+import { AnimatedSection } from "../components/FadeInDiv"
 
 interface HomeProps {
   intro: Intro
@@ -13,7 +14,7 @@ const Home: NextPage<HomeProps> = ({ intro }) => {
 
   return (
     <Container>
-      <div className="mb-8 sm:mb-10">
+      <AnimatedSection delay={0} className="mb-8 sm:mb-10">
         <div className="flex items-baseline space-x-2">
           <h1 className="sm:text-3xl font-bold">Jingxian Chai</h1>
           <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base">
@@ -24,12 +25,12 @@ const Home: NextPage<HomeProps> = ({ intro }) => {
           <h2>{intro.headline}</h2>
           <h2>Based in {intro.base}</h2>
         </div>
-      </div>
-      <article>
+      </AnimatedSection>
+      <AnimatedSection delay={0.2}>
         <div className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
           <MDXContent components={MdxComponents} />
         </div>
-      </article>
+      </AnimatedSection>
     </Container>
   )
 }

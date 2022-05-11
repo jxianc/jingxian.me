@@ -13,6 +13,7 @@
   "dependencies": {
     "contentlayer": "^0.2.4",
     "date-fns": "^2.28.0",
+    "framer-motion": "^6.3.3",
     "lodash": "^4.17.21",
     "next": "12.1.6",
     "next-compose-plugins": "^2.2.1",
@@ -44,7 +45,7 @@
       "pnpm run format",
       "eslint --fix"
     ],
-    "*.{md, mdx}": [
+    "*.{md,mdx}": [
       "pnpm run format"
     ]
   }

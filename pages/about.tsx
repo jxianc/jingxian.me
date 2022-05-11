@@ -1,3 +1,4 @@
+import { AnimatedSection } from "components/FadeInDiv"
 import { MdxComponents } from "components/MdxComponents"
 import { About, allAbouts } from "contentlayer/generated"
 import { GetStaticProps, NextPage } from "next"
@@ -13,10 +14,14 @@ const About: NextPage<AboutProps> = ({ about }) => {
 
   return (
     <Container>
-      <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">{about.title}</h1>
-      <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
-        <MDXContent components={MdxComponents} />
-      </article>
+      <AnimatedSection delay={0}>
+        <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">{about.title}</h1>
+      </AnimatedSection>
+      <AnimatedSection delay={0.2}>
+        <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
+          <MDXContent components={MdxComponents} />
+        </article>
+      </AnimatedSection>
     </Container>
   )
 }

@@ -1,4 +1,5 @@
 import { Container } from "components/Container"
+import { AnimatedSection } from "components/FadeInDiv"
 import { MdxComponents } from "components/MdxComponents"
 import { TechTag } from "components/TechTag"
 import { allProjects, Project } from "contentlayer/generated"
@@ -26,8 +27,8 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
   return (
     <Container>
       {p && (
-        <div>
-          <div className="mb-14">
+        <>
+          <AnimatedSection delay={0} className="mb-14">
             <div className="flex items-baseline space-x-4 mb-2">
               <h1 className="sm:text-lg font-bold">{p.name}</h1>
               <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
@@ -58,15 +59,17 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
               )}
             </div>
             <div className="flex flex-wrap gap-1.5">
-              {p.techs.map((t) => (
-                <TechTag key={t._id} tech={t} />
-              ))}
+              {p.techs.map((t, idx) => {
+                return <TechTag key={idx} tech={t} />
+              })}
             </div>
-          </div>
-          <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
-            <MDXContent components={MdxComponents} />
-          </article>
-        </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
+              <MDXContent components={MdxComponents} />
+            </article>
+          </AnimatedSection>
+        </>
       )}
     </Container>
   )
