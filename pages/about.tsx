@@ -13,8 +13,8 @@ const About: NextPage<AboutProps> = ({ about }) => {
 
   return (
     <Container>
-      <h1 className="text-lg font-bold mb-4">{about.title}</h1>
-      <article className="prose dark:prose-dark max-w-full">
+      <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">{about.title}</h1>
+      <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
         <MDXContent components={MdxComponents} />
       </article>
     </Container>

@@ -10,7 +10,7 @@ export interface NavItemProps {
   icon?: JSX.Element
 }
 
-export const NavItem: React.FC<NavItemProps> = ({ children, href, label }) => {
+export const NavItem: React.FC<NavItemProps> = ({ href, label }) => {
   const router = useRouter()
   const isActive = router.asPath === href
 

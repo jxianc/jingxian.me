@@ -13,18 +13,20 @@ const Home: NextPage<HomeProps> = ({ intro }) => {
 
   return (
     <Container>
-      <div className="mb-10">
+      <div className="mb-8 sm:mb-10">
         <div className="flex items-baseline space-x-2">
-          <h1 className="text-3xl font-bold">Jingxian Chai</h1>
-          <p className="text-gray-800 dark:text-gray-200">he/him/his</p>
+          <h1 className="sm:text-3xl font-bold">Jingxian Chai</h1>
+          <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base">
+            he/him/his
+          </p>
         </div>
-        <div className="text-md font-medium mt-2 text-gray-800 dark:text-gray-200">
+        <div className="text-sm sm:text-base font-medium sm:mt-2 text-gray-800 dark:text-gray-200">
           <h2>{intro.headline}</h2>
           <h2>Based in {intro.base}</h2>
         </div>
       </div>
       <article>
-        <div className="prose dark:prose-dark max-w-full">
+        <div className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
           <MDXContent components={MdxComponents} />
         </div>
       </article>

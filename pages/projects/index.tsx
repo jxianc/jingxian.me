@@ -13,12 +13,12 @@ interface ProjectsProps {
 const Projects: NextPage<ProjectsProps> = ({ projects, categories }) => {
   return (
     <Container>
-      <h1 className="text-lg font-bold mb-4">Projects</h1>
+      <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">Projects</h1>
       <div className="flex flex-col space-y-6">
         {categories.map((cat, idx) => (
           <div key={idx} className="flex flex-col space-y-2">
-            <h2 className="font-semibold">{cat}</h2>
-            <div className="grid grid-cols-2 gap-3">
+            <h2 className="font-semibold text-sm sm:text-base">{cat}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {projects[cat].map((p) => (
                 <ProjectCard key={p._id} project={p} />
               ))}

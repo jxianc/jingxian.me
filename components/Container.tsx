@@ -3,6 +3,7 @@ import NextLink from "next/link"
 import { NavItem, NavItemProps } from "./NavItem"
 import { useTheme } from "next-themes"
 import { FaRegMoon, FaRegSun } from "react-icons/fa"
+import { VscAccount, VscFile, VscHome, VscTools } from "react-icons/vsc"
 import { Footer } from "./Footer"
 
 interface ContainerProps {
@@ -10,13 +11,18 @@ interface ContainerProps {
 }
 
 const items: NavItemProps[] = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Home", icon: <VscHome size={20} /> },
   {
     href: "/about",
     label: "About",
+    icon: <VscAccount className="" size={20} />,
   },
-  { href: "/projects", label: "Projects" },
-  { href: "/resume", label: "Resume" },
+  { href: "/projects", label: "Projects", icon: <VscTools size={20} /> },
+  {
+    href: "/resume",
+    label: "Resume",
+    icon: <VscFile size={20} />,
+  },
 ]
 
 export const Container: React.FC<ContainerProps> = ({ children }) => {
@@ -64,7 +70,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
                 </button>
               )}
             </nav>
-            <div className="flex flex-col px-3 min-h-[70vh] mb-10">
+            <div className="flex flex-col sm:px-3 min-h-[70vh] mb-10">
               {children}
             </div>
             <Footer />

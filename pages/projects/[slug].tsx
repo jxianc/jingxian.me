@@ -29,12 +29,12 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
         <div>
           <div className="mb-14">
             <div className="flex items-baseline space-x-4 mb-2">
-              <h1 className="text-lg font-bold">{p.name}</h1>
-              <p className="text-gray-800 dark:text-gray-200">
+              <h1 className="sm:text-lg font-bold">{p.name}</h1>
+              <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
                 {formatDate(p.date)}
               </p>
             </div>
-            <h2 className="mb-6 text-sm text-gray-800 dark:text-gray-200">
+            <h2 className="mb-6 text-sm sm:text-base text-gray-800 dark:text-gray-200">
               {p.description}
             </h2>
             <div className="flex space-x-2 mb-2">
@@ -42,7 +42,7 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
                 href={p.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
+                className="text-xs base:text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
               >
                 <span>GitHub</span>
               </a>
@@ -51,7 +51,7 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
                   href={p.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
+                  className="text-xs base:text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
                 >
                   <span>Project</span>
                 </a>
@@ -63,7 +63,7 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
               ))}
             </div>
           </div>
-          <article className="prose dark:prose-dark max-w-full">
+          <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
             <MDXContent components={MdxComponents} />
           </article>
         </div>
