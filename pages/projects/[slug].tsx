@@ -42,7 +42,7 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
                 href={p.repoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs base:text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
+                className="text-xs sm:text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
               >
                 <span>GitHub</span>
               </a>
@@ -51,7 +51,7 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
                   href={p.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs base:text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
+                  className="text-xs sm:text-sm font-bold px-1.5 bg-gray-600 hover:bg-gray-700 text-white rounded-sm"
                 >
                   <span>Project</span>
                 </a>
