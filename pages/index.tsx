@@ -3,7 +3,7 @@ import { Container } from "../components/Container"
 import { allIntros, Intro } from "contentlayer/generated"
 import { useMDXComponent } from "next-contentlayer/hooks"
 import { MdxComponents } from "components/MdxComponents"
-import { AnimatedSection } from "../components/FadeInDiv"
+import { AnimatedSection } from "../components/AnimatedSection"
 
 interface HomeProps {
   intro: Intro

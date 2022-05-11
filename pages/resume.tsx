@@ -1,4 +1,4 @@
-import { AnimatedSection } from "components/FadeInDiv"
+import { AnimatedSection } from "components/AnimatedSection"
 import { NextPage } from "next"
 import { Container } from "../components/Container"
 

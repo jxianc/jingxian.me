@@ -4,7 +4,7 @@ import { Container } from "../../components/Container"
 import { groupBy, Dictionary } from "lodash"
 import { compareDesc } from "date-fns"
 import { ProjectCard } from "components/ProjectCard"
-import { AnimatedSection } from "components/FadeInDiv"
+import { AnimatedSection } from "components/AnimatedSection"
 
 interface ProjectsProps {
   projects: Dictionary<Project[]>

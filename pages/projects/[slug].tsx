@@ -1,5 +1,5 @@
 import { Container } from "components/Container"
-import { AnimatedSection } from "components/FadeInDiv"
+import { AnimatedSection } from "components/AnimatedSection"
 import { MdxComponents } from "components/MdxComponents"
 import { TechTag } from "components/TechTag"
 import { allProjects, Project } from "contentlayer/generated"

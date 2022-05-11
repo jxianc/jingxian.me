@@ -1,4 +1,4 @@
-import { AnimatedSection } from "components/FadeInDiv"
+import { AnimatedSection } from "components/AnimatedSection"
 import { MdxComponents } from "components/MdxComponents"
 import { About, allAbouts } from "contentlayer/generated"
 import { GetStaticProps, NextPage } from "next"
