@@ -16,9 +16,9 @@ const Home: NextPage<HomeProps> = ({ intro }) => {
       <div className="mb-10">
         <div className="flex items-baseline space-x-2">
           <h1 className="text-3xl font-bold">Jingxian Chai</h1>
-          <p>he/him/his</p>
+          <p className="text-gray-800 dark:text-gray-200">he/him/his</p>
         </div>
-        <div className="text-md font-medium mt-2">
+        <div className="text-md font-medium mt-2 text-gray-800 dark:text-gray-200">
           <h2>{intro.headline}</h2>
           <h2>Based in {intro.base}</h2>
         </div>

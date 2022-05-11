@@ -30,9 +30,13 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
           <div className="mb-14">
             <div className="flex items-baseline space-x-4 mb-2">
               <h1 className="text-lg font-bold">{p.name}</h1>
-              <p>{formatDate(p.date)}</p>
+              <p className="text-gray-800 dark:text-gray-200">
+                {formatDate(p.date)}
+              </p>
             </div>
-            <h2 className="mb-6 text-sm">{p.description}</h2>
+            <h2 className="mb-6 text-sm text-gray-800 dark:text-gray-200">
+              {p.description}
+            </h2>
             <div className="flex space-x-2 mb-2">
               <a
                 href={p.repoUrl}
@@ -59,7 +63,7 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
               ))}
             </div>
           </div>
-          <article className="prose dark:prose-dark">
+          <article className="prose dark:prose-dark max-w-full">
             <MDXContent components={MdxComponents} />
           </article>
         </div>

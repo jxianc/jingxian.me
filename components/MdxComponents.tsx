@@ -1,7 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import NextLink from "next/link"
 import Image from "next/image"
-import { cn } from "utils/classname"
 
 const CustomLink = (props: any) => {
   const href = props.href
