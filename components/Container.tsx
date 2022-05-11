@@ -28,7 +28,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
   }, [])
 
   return (
-    <div className="min-h-screen overflow-hidden dark:bg-black/40">
+    <div className="min-h-screen overflow-hidden bg-gray-50 dark:bg-black/30">
       <div className="relative">
         <div className="max-w-2xl mx-auto w-full opacity-100">
           <div className="flex flex-col justify-center px-4 sm:px-8">
@@ -64,7 +64,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
                 </button>
               )}
             </nav>
-            <div className="flex flex-col px-3 min-h-[75vh] mb-10">
+            <div className="flex flex-col px-3 min-h-[70vh] mb-10">
               {children}
             </div>
             <Footer />
