@@ -5,7 +5,7 @@ import { useTheme } from "next-themes"
 import { FaRegMoon, FaRegSun } from "react-icons/fa"
 import { VscAccount, VscFile, VscHome, VscTools } from "react-icons/vsc"
 import { Footer } from "./Footer"
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 
 interface ContainerProps {
   children?: React.ReactNode
@@ -60,20 +60,30 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
               ))}
             </div>
             {mounted && (
-              <button
-                aria-label="Toggle Dark Mode"
-                type="button"
-                className="highlight w-9 h-9 bg-gray-100 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-800 hover:ring-2 ring-gray-300 dark:ring-gray-500 transition-all"
-                onClick={() => {
-                  setTheme(theme === "dark" ? "light" : "dark")
-                }}
-              >
-                {theme === "dark" ? (
-                  <FaRegSun size={18} />
-                ) : (
-                  <FaRegMoon size={18} />
-                )}
-              </button>
+              <AnimatePresence exitBeforeEnter initial={false}>
+                <motion.div
+                  key={theme}
+                  initial={{ opacity: 0, y: -30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 30 }}
+                  transition={{ duration: 0.25, type: "easeInOut" }}
+                >
+                  <button
+                    aria-label="Toggle Dark Mode"
+                    type="button"
+                    className="highlight w-9 h-9 bg-gray-100 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-800 hover:ring-2 ring-gray-300 dark:ring-gray-500 transition-all"
+                    onClick={() => {
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }}
+                  >
+                    {theme === "dark" ? (
+                      <FaRegSun size={18} />
+                    ) : (
+                      <FaRegMoon size={18} />
+                    )}
+                  </button>
+                </motion.div>
+              </AnimatePresence>
             )}
           </nav>
           <motion.main
