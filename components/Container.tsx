@@ -92,7 +92,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
             exit="exit"
             variants={variants}
             transition={{ duration: 0.5, type: "easeInOut" }}
-            className="flex flex-col sm:px-3"
+            className="flex flex-col sm:px-2"
           >
             <div className="min-h-[70vh] mb-10">{children}</div>
             <Footer />

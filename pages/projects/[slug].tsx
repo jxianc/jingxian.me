@@ -28,6 +28,15 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
     <Container>
       {p && (
         <>
+          <button
+            type="button"
+            className="px-1.5 py-0.5 font-mono text-sm sm:text-base rounded-[4px] font-semibold bg-gray-100 mb-4 hover:bg-gray-200 dark:bg-gray-900 hover:dark:bg-gray-800"
+            onClick={() => {
+              router.back()
+            }}
+          >
+            {"> "}cd ..
+          </button>
           <AnimatedSection delay={0} className="mb-14">
             <div className="flex items-baseline space-x-4 mb-2">
               <h1 className="sm:text-lg font-bold">{p.name}</h1>
