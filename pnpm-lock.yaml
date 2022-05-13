@@ -19,6 +19,7 @@ specifiers:
   next: 12.1.6
   next-compose-plugins: ^2.2.1
   next-contentlayer: ^0.2.4
+  next-seo: ^5.4.0
   next-themes: ^0.2.0
   postcss: ^8.4.13
   prettier: ^2.6.2
@@ -36,6 +37,7 @@ dependencies:
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   next-compose-plugins: 2.2.1
   next-contentlayer: 0.2.4_2mgcgz5qhsdxw4fgpqzqeafmkq
+  next-seo: 5.4.0_2mgcgz5qhsdxw4fgpqzqeafmkq
   next-themes: 0.2.0_2mgcgz5qhsdxw4fgpqzqeafmkq
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
@@ -3659,6 +3661,18 @@ packages:
       - '@effect-ts/otel-node'
       - markdown-wasm
       - supports-color
+    dev: false
+
+  /next-seo/5.4.0_2mgcgz5qhsdxw4fgpqzqeafmkq:
+    resolution: {integrity: sha512-R9DhajPwJnR/lsF2hZ8cN8uqr5CVITsRrCG1AF5+ufcaybKYOvnH8sH9MaH4/hpkps3PQ9H71S7J7SPYixAYzQ==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
     dev: false
 
   /next-themes/0.2.0_2mgcgz5qhsdxw4fgpqzqeafmkq:
