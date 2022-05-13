@@ -68,10 +68,6 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
             },
           ],
         }}
-        twitter={{
-          site: "@jingxianchai",
-          cardType: "player",
-        }}
       />
       <div className="min-h-screen overflow-hidden">
         <div className="max-w-3xl mx-auto w-full opacity-100">
