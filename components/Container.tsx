@@ -42,7 +42,7 @@ export const Container: React.FC<ContainerProps> = ({
   ...customMeta
 }) => {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme, resolvedTheme, setTheme } = useTheme()
   const router = useRouter()
 
   const meta = {
@@ -110,10 +110,10 @@ export const Container: React.FC<ContainerProps> = ({
                       type="button"
                       className="highlight w-9 h-9 bg-gray-100 dark:bg-gray-900 rounded-md flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-800 hover:ring-2 ring-gray-300 dark:ring-gray-500 transition-all"
                       onClick={() => {
-                        setTheme(theme === "dark" ? "light" : "dark")
+                        setTheme(resolvedTheme === "dark" ? "light" : "dark")
                       }}
                     >
-                      {theme === "dark" ? (
+                      {resolvedTheme === "dark" ? (
                         <FaRegSun size={18} />
                       ) : (
                         <FaRegMoon size={18} />
