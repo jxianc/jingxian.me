@@ -91,7 +91,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
             animate="enter"
             exit="exit"
             variants={variants}
-            transition={{ duration: 0.5, type: "easeInOut" }}
+            transition={{ duration: 0.3, type: "easeInOut" }}
             className="flex flex-col sm:px-2"
           >
             <div className="min-h-[70vh] mb-10">{children}</div>
