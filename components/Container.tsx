@@ -63,6 +63,8 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
               url: "https://jingxian-me.vercel.app/favicons/android-chrome-512x512.png",
               type: "image/png",
               alt: "jingxianlogo",
+              width: 512,
+              height: 512,
             },
           ],
         }}
