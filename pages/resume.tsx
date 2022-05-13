@@ -6,7 +6,10 @@ interface ResumeProps {}
 
 const Resume: NextPage<ResumeProps> = ({}) => {
   return (
-    <Container>
+    <Container
+      title="Resume - Jingxian Chai"
+      description="resume of Jingxian Chai"
+    >
       <AnimatedSection delay={0}>
         <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">Resume</h1>
       </AnimatedSection>

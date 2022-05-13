@@ -25,9 +25,13 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
   }, [p, router])
 
   return (
-    <Container>
+    <>
       {p && (
-        <>
+        <Container
+          title={`${p.name} - Jingxian Chai`}
+          description={p.description}
+          ogType="article"
+        >
           <button
             type="button"
             className="px-1.5 py-0.5 font-mono text-sm sm:text-base rounded-[4px] font-semibold bg-gray-100 mb-4 hover:bg-gray-200 dark:bg-gray-900 hover:dark:bg-gray-800"
@@ -78,9 +82,9 @@ const Project: NextPage<ProjectProps> = ({ project: p }) => {
               <MDXContent components={MdxComponents} />
             </article>
           </AnimatedSection>
-        </>
+        </Container>
       )}
-    </Container>
+    </>
   )
 }
 

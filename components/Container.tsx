@@ -9,10 +9,6 @@ import { AnimatePresence, motion } from "framer-motion"
 import { NextSeo } from "next-seo"
 import { useRouter } from "next/router"
 
-interface ContainerProps {
-  children?: React.ReactNode
-}
-
 const items: NavItemProps[] = [
   { href: "/", label: "Home", icon: <VscHome size={20} /> },
   {
@@ -34,14 +30,27 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 20 },
 }
 
-export interface MetaData {
-  title: string
+interface ContainerProps {
+  children?: React.ReactNode
+  title?: string
+  description?: string
+  ogType?: string
 }
 
-export const Container: React.FC<ContainerProps> = ({ children }) => {
+export const Container: React.FC<ContainerProps> = ({
+  children,
+  ...customMeta
+}) => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const router = useRouter()
+
+  const meta = {
+    title: "Jingxian Chai",
+    description: "Full-Stack Developer && Computer Science Student",
+    ogType: "website",
+    ...customMeta,
+  }
 
   useEffect(() => {
     setMounted(true)
@@ -50,14 +59,14 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
     <div className="bg-gray-50 dark:bg-black/10">
       <NextSeo
-        title="Jingxian Chai"
-        description="Full-Stack Developer && Computer Science Student"
+        title={meta.title}
+        description={meta.description}
         canonical={`https://jingxian-me.vercel.app${router.asPath}`}
         openGraph={{
-          type: "website",
-          title: "Jingxian Chai",
+          type: meta.ogType,
+          title: meta.title,
           site_name: "Jingxian Chai",
-          description: "Full-Stack Developer && Computer Science Student",
+          description: meta.description,
           images: [
             {
               url: "https://jingxian-me.vercel.app/favicons/android-chrome-512x512.png",

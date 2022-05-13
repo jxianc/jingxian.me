@@ -13,7 +13,10 @@ interface ProjectsProps {
 
 const Projects: NextPage<ProjectsProps> = ({ projects, categories }) => {
   return (
-    <Container>
+    <Container
+      title="Projects - Jingxian Chai"
+      description="The projects of Jingxian Chai"
+    >
       <AnimatedSection delay={0}>
         <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">Projects</h1>
       </AnimatedSection>

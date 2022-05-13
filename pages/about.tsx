@@ -13,7 +13,11 @@ const About: NextPage<AboutProps> = ({ about }) => {
   const MDXContent = useMDXComponent(about.body.code)
 
   return (
-    <Container>
+    <Container
+      title="About - Jingxian Chai"
+      description={about.title}
+      ogType="article"
+    >
       <AnimatedSection delay={0}>
         <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">{about.title}</h1>
       </AnimatedSection>
