@@ -4,6 +4,20 @@ export default function Document(props: any) {
   return (
     <Html lang="en">
       <Head>
+        <link
+          rel="preload"
+          href="/fonts/Noto_Sans/NotoSans-Bold.ttf"
+          as="font"
+          type="truetype"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Noto_Sans/NotoSans-Regular.ttf"
+          as="font"
+          type="truetype"
+          crossOrigin="anonymous"
+        />
         <link href="/favicons/favicon.ico" rel="shortcut icon" />
         <link
           href="/favicons/apple-touch-icon.png"
