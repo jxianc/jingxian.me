@@ -52,7 +52,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
       <NextSeo
         title="Jingxian Chai"
         description="Full-Stack Developer && Computer Science Student"
-        canonical={`https://jingxian.me${router.asPath}`}
+        canonical={`https://jingxian-me.vercel.app${router.asPath}`}
         openGraph={{
           type: "website",
           title: "Jingxian Chai",
@@ -60,7 +60,7 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
           description: "Full-Stack Developer && Computer Science Student",
           images: [
             {
-              url: "https://jingxian.me/favicons/android-chrome-512x512.png",
+              url: "https://jingxian-me.vercel.app/favicons/android-chrome-512x512.png",
               alt: "",
             },
           ],
