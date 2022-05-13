@@ -8,14 +8,14 @@ export default function Document(props: any) {
           rel="preload"
           href="/fonts/Noto_Sans/NotoSans-Bold.ttf"
           as="font"
-          type="truetype"
+          type="font/ttf"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
           href="/fonts/Noto_Sans/NotoSans-Regular.ttf"
           as="font"
-          type="truetype"
+          type="font/ttf"
           crossOrigin="anonymous"
         />
         <link href="/favicons/favicon.ico" rel="shortcut icon" />
