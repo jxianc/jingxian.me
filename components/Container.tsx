@@ -61,13 +61,14 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
           images: [
             {
               url: "https://jingxian-me.vercel.app/favicons/android-chrome-512x512.png",
-              alt: "",
+              type: "image/png",
+              alt: "jingxianlogo",
             },
           ],
         }}
         twitter={{
           site: "@jingxianchai",
-          cardType: "summary_large_image",
+          cardType: "player",
         }}
       />
       <div className="min-h-screen overflow-hidden">
