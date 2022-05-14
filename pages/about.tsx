@@ -3,6 +3,8 @@ import { MdxComponents } from "components/MdxComponents"
 import { About, allAbouts } from "contentlayer/generated"
 import { GetStaticProps, NextPage } from "next"
 import { useMDXComponent } from "next-contentlayer/hooks"
+import { useRouter } from "next/router"
+import { useEffect } from "react"
 import { Container } from "../components/Container"
 
 interface AboutProps {
@@ -11,6 +13,11 @@ interface AboutProps {
 
 const About: NextPage<AboutProps> = ({ about }) => {
   const MDXContent = useMDXComponent(about.body.code)
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push("/404")
+  }, [])
 
   return (
     <Container

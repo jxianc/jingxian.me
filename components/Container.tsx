@@ -11,11 +11,11 @@ import { useRouter } from "next/router"
 
 const items: NavItemProps[] = [
   { href: "/", label: "Home", icon: <VscHome size={20} /> },
-  {
-    href: "/about",
-    label: "About",
-    icon: <VscAccount className="" size={20} />,
-  },
+  // {
+  //   href: "/about",
+  //   label: "About",
+  //   icon: <VscAccount className="" size={20} />,
+  // },
   { href: "/projects", label: "Projects", icon: <VscTools size={20} /> },
   {
     href: "/resume",
