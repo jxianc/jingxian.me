@@ -61,7 +61,7 @@ export const Container: React.FC<ContainerProps> = ({
       <NextSeo
         title={meta.title}
         description={meta.description}
-        canonical={`https://jingxian-me.vercel.app${router.asPath}`}
+        canonical={`https://jingxian.me${router.asPath}`}
         openGraph={{
           type: meta.ogType,
           title: meta.title,
@@ -69,7 +69,7 @@ export const Container: React.FC<ContainerProps> = ({
           description: meta.description,
           images: [
             {
-              url: "https://jingxian-me.vercel.app/favicons/android-chrome-512x512.png",
+              url: "https://jingxian.me/favicons/android-chrome-512x512.png",
               type: "image/png",
               alt: "jingxianlogo",
               width: 512,
