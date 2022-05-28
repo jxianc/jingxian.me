@@ -20,11 +20,11 @@ const Resume: NextPage<ResumeProps> = ({ resume }) => {
       <AnimatedSection delay={0}>
         <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">{resume!.title}</h1>
       </AnimatedSection>
-      <AnimatedSection delay={0.2}>
+      {/* <AnimatedSection delay={0.2}>
         <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
           <MDXContent components={MdxComponents} />
         </article>
-      </AnimatedSection>
+      </AnimatedSection> */}
       <AnimatedSection delay={0.2}>
         <div className="mt-4">
           <iframe
