@@ -20,8 +20,51 @@ const Resume: NextPage<ResumeProps> = ({ resume }) => {
       <AnimatedSection delay={0}>
         <h1 className="sm:text-lg font-bold mb-2 sm:mb-4">{resume!.title}</h1>
       </AnimatedSection>
+      <div className="space-y-4">
+        <div>
+          <div className="flex space-x-2 items-baseline">
+            <div className="font-semibold text-lg">Jingxian Chai</div>
+            <div className="text-sm">he/him/his</div>
+          </div>
+          <div className="flex space-x-1 items-baseline text-sm flex-wrap">
+            <div>jingxianchai01@gmail.com</div>
+            <div>|</div>
+            <div>Minneapolis, MN, 55414</div>
+            <div>|</div>
+            <div>LinkedIn</div>
+            <div>|</div>
+            <div>GitHub</div>
+          </div>
+        </div>
+        <div>
+          <div className="font-semibold text-lg">Education</div>
+          <div className="text-sm space-y-4">
+            <div>
+              <div className="flex space-x-2">
+                <div className="font-semibold">
+                  University of Minnesota, Twin Cities
+                </div>
+                <div>Minneapolis, MN</div>
+              </div>
+              <div>Sep 2021 - Expected May 2023</div>
+            </div>
+            <div>
+              <div className="flex space-x-2">
+                {/* <div className="font-semibold">Taylors University</div> */}
+                <div>Selangor, Malaysia</div>
+              </div>
+              <div>May 2019 - Dec 2020</div>
+              {/* <div> list (Fall 2020) | Coding Club | Board Game Club</div> */}
+            </div>
+          </div>
+        </div>
+      </div>
       <AnimatedSection delay={0.2}>
-        <article className="prose dark:prose-dark max-w-full prose-sm sm:prose-base">
+        <article
+          className="prose dark:prose-dark max-w-full prose-sm sm:prose-base
+          prose-p:leading-6
+        "
+        >
           <MDXContent components={MdxComponents} />
         </article>
       </AnimatedSection>
