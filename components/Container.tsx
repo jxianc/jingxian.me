@@ -17,11 +17,11 @@ const items: NavItemProps[] = [
   //   icon: <VscAccount className="" size={20} />,
   // },
   { href: "/projects", label: "Projects", icon: <VscTools size={20} /> },
-  {
-    href: "/resume",
-    label: "Resume",
-    icon: <VscFile size={20} />,
-  },
+  // {
+  //   href: "/resume",
+  //   label: "Resume",
+  //   icon: <VscFile size={20} />,
+  // },
 ]
 
 const variants = {
