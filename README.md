@@ -1,4 +1,4 @@
-# [jingxian.me](https://jingxian.me)
+# [jxian.dev](https://jxian.dev)
 
 This is my personal website to introduce myself and showcase the projects I built.
 
